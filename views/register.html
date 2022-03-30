@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body class="margin-0 bg-color-Gris-claro">
+    <header class="header">
+      <section class="header-section-conteiner display-flex padding-10">
+        <h1 class="header-h1 margin-0 width-48">
+          <a class="header-logo-a" href="/"
+            ><img
+              class="margin-0 header-h1-img"
+              src="/img/logo-mercado-liebre.svg"
+              alt="Mercado Liebre"
+          /></a>
+        </h1>
+
+        <form class="header-form width-48" action="search" method="get">
+          <label class="label-none" for="search">search</label>
+          <input
+            class="input-search margin-0"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Buscar productos, marcas y más"
+            pattern="[a-zA-Z0-9]{1,16}"
+            title="In search you must enter letters, numbers"
+          />
+          <button id="button-search">
+            <i
+              class="fas fa-search bg-color-Gris-claro fa-search-align font-16"
+            ></i>
+          </button>
+        </form>
+        <p class="header-paragraph-cuotas text-align-center width-100">
+          <i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta
+          de crédito
+        </p>
+      </section>
+      <nav class="header-nav">
+        <ul class="header-nav-left">
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="header-nav-right">
+          <li>
+            <a href="/register"
+              >Creá tu cuenta<i class="fas fa-address-card"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/login">Ingresá<i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li>
+            <a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="burger-menu font-16 padding-10 bg-color-light-blue color-light-gray"
+      >
+        <i class="fas fa-bars"></i>
+      </div>
+    </header>
+    <main>
+      <form class="register-main-form" action="" method="post">
+        <label class="label-none" for="name">Nombre y Apellido</label>
+        <input
+          class="input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Nombre y Apellido"
+          required
+          pattern="[a-zA-Z]{3,16}"
+          title="The name should only conatin letters"
+        />
+
+        <label class="label-none" for="userName">Nombre de usuario</label>
+        <input
+          class="input"
+          type="text"
+          name="userName"
+          id="userName"
+          placeholder="Nombre de usuario"
+          required
+          pattern="[a-zA-Z0-9_-]{3,16}"
+          title="Username should only conatin letters, number, '_', '-'"
+        />
+
+        <label class="label-none" for="email">E-mail</label>
+        <input
+          class="input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="E-mail"
+          required
+          pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+          title="The e-mail is invalid. please enter a correct email 'example user@domain.com'"
+        />
+
+        <label class="label-none" for="street-address">Domicilio</label>
+        <input
+          class="input"
+          type="text"
+          name="street-address"
+          id="street-address"
+          placeholder="Domicilio"
+          required
+          pattern="[a-zA-Z0-9 -]{3,255}"
+          title="The street address is wrong"
+        />
+
+        <label class="label-none" for="password">Contraseña</label>
+        <input
+          class="input"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Contraseña"
+          required
+          pattern="^.{4,12}"
+          title="The password must be 8 characters or more"
+        />
+
+        <label class="label-none" for="password-validate"
+          >Confirmar contraseña</label
+        >
+        <input
+          class="input"
+          type="password"
+          name="password"
+          id="password-validate"
+          placeholder="Confirmar Contraseña"
+          required
+          pattern="^.{4,12}"
+          title="The password must be 8 characters or more"
+        />
+        <h2>Fecha de nacimiento</h2>
+        <label class="label-none" for="date">Fecha de nacimiento</label>
+        <input
+          class="input bg-color-white"
+          type="date"
+          name="date"
+          id="date"
+          placeholder="mm/dd/yyyy"
+          required
+        />
+
+        <h2>Perfil del ususario</h2>
+        <div class="checkbox display-flex">
+          <label class="label-none" for="prefil-usuario"
+            >Perfil del ususario</label
+          >
+          <input type="radio" name="prefil-usuario" id="comprador" />
+          <label class="label-checkbox" for="comprador">Comprador</label>
+          <input type="radio" name="prefil-usuario" id="vendedor" />
+          <label class="label-checkbox" for="vendedor">Vendedor</label>
+        </div>
+
+        <h2>Foto de ususario</h2>
+        <label class="label-none" for="foto">Foto de ususario</label>
+        <input
+          class="input input-foto"
+          type="file"
+          name="foto"
+          id="foto"
+          accept="image/*"
+        />
+        <h2>Intereses</h2>
+        <label class="label-none" for="intereses">Intereses</label>
+        <div class="intereses display-flex">
+          <input type="checkbox" name="electro" id="electro" />
+          <label for="elctro">Electro</label>
+        </div>
+        <div class="intereses display-flex">
+          <input type="checkbox" name="moda" id="moda" />
+          <label for="moda">Moda</label>
+        </div>
+        <div class="intereses display-flex">
+          <input type="checkbox" name="hogar" id="hogar" />
+          <label for="hogar">Hogar</label>
+        </div>
+        <div class="intereses display-flex">
+          <input type="checkbox" name="Jugueteria" id="Jugueteria" />
+          <label for="Jugueteria">Jugueteria</label>
+        </div>
+        <div class="intereses display-flex">
+          <input type="checkbox" name="vida-sana" id="vida-sana" />
+          <label for="vida-sana">Vida sana</label>
+        </div>
+        <div class="text-align-center">
+          <button
+            class="button-submit padding-8 width-100 bg-color-light-blue color-light-gray"
+            type="submit"
+          >
+            Enviar
+          </button>
+          <button
+            class="button-reset padding-8 width-100 color-light-gray"
+            type="reset"
+          >
+            Borrar
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer class="bg-color-white text-align-center">
+      <section class="footer-section">
+        <i class="fas fa-credit-card"></i>
+        <h2 class="margin-0 font-16">Pagá con tarjeta o en efectivo</h2>
+        <p class="margin-0">
+          Con MercadoLiebreCash, tenés cuotas sin interés con tarjeta o efectivo
+          en puntos de pago. ¡Y siempre es seguro!
+        </p>
+      </section>
+      <section class="footer-section">
+        <i class="fas fa-gift"></i>
+        <h2 class="margin-0 font-16">Envío gratis desde los $ 2.500</h2>
+        <p class="margin-0">
+          Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en
+          miles de productos. Es un beneficio de MercadoPuntos.
+        </p>
+      </section>
+      <section class="footer-section">
+        <i class="fas fa-user-shield"></i>
+        <h2 class="margin-0 font-16">Seguridad, de principio a fin</h2>
+        <p class="margin-0">
+          ¿No te gusta? ¡Devolvelo! En MercadoLiebre, no hay nada que no puedas
+          hacer, porque estás siempre protegid@.
+        </p>
+      </section>
+      <section class="footer-section-copyright">
+        <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
+      </section>
+    </footer>
+  </body>
+</html>
