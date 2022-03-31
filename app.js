@@ -14,7 +14,7 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/home.html"));
+  res.sendFile(path.resolve(__dirname, "./views/Home.html"));
 });
 app.get("/register", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/register.html"));
